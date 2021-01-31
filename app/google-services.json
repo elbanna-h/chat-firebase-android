@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "603516157849",
+    "project_id": "testchat-a4aac",
+    "storage_bucket": "testchat-a4aac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603516157849:android:12ece33cbce281e07f5d08",
+        "android_client_info": {
+          "package_name": "ws.hany.chatfirebaseandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603516157849-c4s4s6bt8rlnvqhbitjbcrbkb85e7b83.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD83doYvpq2BDyd1vASCy1YR_Eriu7ZNpI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603516157849-c4s4s6bt8rlnvqhbitjbcrbkb85e7b83.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

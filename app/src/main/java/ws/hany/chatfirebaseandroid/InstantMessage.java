@@ -1,26 +1,24 @@
 package ws.hany.chatfirebaseandroid;
 
-public class InstantMessage {
+import java.io.Serializable;
+
+public class InstantMessage implements Serializable {
 
     private String message;
     private String author;
 
-    InstantMessage(String message, String author) {
+    public InstantMessage(String message, String author) {
         this.message = message;
         this.author = author;
     }
 
-    public InstantMessage() {
+    public InstantMessage() {}
 
-
-
-    }
-
-    String getMessage() {
+    public String getMessage() {
         return message;
     }
 
-    String getAuthor() {
+    public String getAuthor() {
         return author;
     }
 

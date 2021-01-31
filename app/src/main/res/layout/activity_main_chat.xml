@@ -52,5 +52,4 @@
             android:contentDescription="@string/action_send"/>
     </LinearLayout>
 
-
 </RelativeLayout>

@@ -11,6 +11,8 @@ import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -19,14 +21,14 @@ import com.google.firebase.database.DatabaseReference;
 import java.util.ArrayList;
 
 public class ChatListAdapter extends BaseAdapter {
-    private Activity mActivity;
-    private DatabaseReference mDatabaseReference;
-    private String mDisplayName;
-    private ArrayList<DataSnapshot> mSnapshotList;
+    private final Activity mActivity;
+    private final DatabaseReference mDatabaseReference;
+    private final String mDisplayName;
+    private final ArrayList<DataSnapshot> mSnapshotList;
 
-    private ChildEventListener mListener = new ChildEventListener() {
+    private final ChildEventListener mListener = new ChildEventListener() {
         @Override
-        public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+        public void onChildAdded(@NonNull DataSnapshot dataSnapshot, String s) {
 
             mSnapshotList.add(dataSnapshot);
             notifyDataSetChanged();
@@ -34,22 +36,22 @@ public class ChatListAdapter extends BaseAdapter {
         }
 
         @Override
-        public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+        public void onChildChanged(@NonNull DataSnapshot dataSnapshot, String s) {
 
         }
 
         @Override
-        public void onChildRemoved(DataSnapshot dataSnapshot) {
+        public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
 
         }
 
         @Override
-        public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+        public void onChildMoved(@NonNull DataSnapshot dataSnapshot, String s) {
 
         }
 
         @Override
-        public void onCancelled(DatabaseError databaseError) {
+        public void onCancelled(@NonNull DatabaseError databaseError) {
 
         }
     };
@@ -96,8 +98,8 @@ public class ChatListAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.chat_msg_row, parent, false);
 
             final ViewHolder holder = new ViewHolder();
-            holder.authorName = (TextView) convertView.findViewById(R.id.author);
-            holder.body = (TextView) convertView.findViewById(R.id.message);
+            holder.authorName = convertView.findViewById(R.id.author);
+            holder.body = convertView.findViewById(R.id.message);
             holder.params = (LinearLayout.LayoutParams) holder.authorName.getLayoutParams();
             convertView.setTag(holder);
 
